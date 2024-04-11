@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <div class="page__container dashboard">
+                   <div class="dashboard__menu">
+                       <div class="dashboard__menu__content">
+                           <div class="dashboard__menu__title">
+                               <img class="dashboard__menu__title__img" src="images/setting.jpg" alt="setting">
+                               <h1 class="dashboard__menu__title__text">Dashboard</h1>
+                               <span class="dashboard__menu__title__version">v.01</span>
+                               <button class="hamburger-menu__button-close-mini-screens" onclick="closeNavMiniScreen()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg></button>
+                           </div>
+                           <nav class="dashboard__menu__navigation navigation">
+                               <ul class="navigation__items">
+                                   <li class="navigation__item">
+                                       <img class="navigation__item__img" src="images/navigation_items/key-square.jpg" alt="key">
+                                       <a href="#" class="navigation__item__name">Dashboard</a>
+                                   </li>
+                                   <li class="navigation__item">
+                                       <img class="navigation__item__img" src="images/navigation_items/3d-square.jpg" alt="key">
+                                       <a href="#" class="navigation__item__name">Product</a>
+                                       <div class="navigation__item__arrow-container">
+                                           <a href="#"><img class="navigation__item__arrow" src="images/navigation_items/chevron-right.jpg" alt="arrow"></a>
+                                       </div>
+                                   </li>
+                                   <li class="navigation__item navigation__item-active">
+                                       <img class="navigation__item__img" src="images/navigation_items/user-icon.png" alt="key">
+                                       <a href="#" class="navigation__item__name">Customers</a>
+                                       <div class="navigation__item__arrow-container">
+                                           <a href="#"><img class="navigation__item__arrow" src="images/navigation_items/chevron-right-white.svg" alt="arrow"></a>
+                                       </div>
+                                   </li>
+                                   <li class="navigation__item">
+                                       <img class="navigation__item__img" src="images/navigation_items/wallet-money.jpg" alt="key">
+                                       <a href="#" class="navigation__item__name">Income</a>
+                                       <div class="navigation__item__arrow-container">
+                                           <a href="#"><img class="navigation__item__arrow" src="images/navigation_items/chevron-right.jpg" alt="arrow"></a>
+                                       </div>
+                                   </li>
+                                   <li class="navigation__item">
+                                       <img class="navigation__item__img" src="images/navigation_items/discount-shape.jpg" alt="key">
+                                       <a href="#" class="navigation__item__name">Promote</a>
+                                       <div class="navigation__item__arrow-container">
+                                           <a href="#"><img class="navigation__item__arrow" src="images/navigation_items/chevron-right.jpg" alt="arrow"></a>
+                                       </div>
+                                   </li>
+                                   <li class="navigation__item">
+                                       <img class="navigation__item__img" src="images/navigation_items/message-question.jpg" alt="key">
+                                       <a href="#" class="navigation__item__name">Help</a>
+                                       <div class="navigation__item__arrow-container">
+                                           <a href="#">  <img class="navigation__item__arrow" src="images/navigation_items/chevron-right.jpg" alt="arrow"></a>
+                                       </div>
+                                   </li>
+                               </ul>
+                           </nav>
+                           <div class="manager-info">
+                               <img class="manager-info__img" src="images/manager-info.jpg" alt="manager-info">
+                               <div class="manager-info__content">
+                                   <h3>Evano</h3>
+                                   <span>Project Manager</span>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                    <div class="dashboard__content">
+                        <div class="dashboard__content__container">
+                            <div class="dashboard__content__hello">
+                                <div class="dashboard__content__hello__content">
+                                    Hello Evano 👋🏼,
+                                </div>
+                                <div class="hamburger-menu">
+                                    <button class="hamburger-menu__button hamburger-menu__button-open" onclick="openNav()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+                                    <button class="hamburger-menu__button hamburger-menu__button-close" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg></button>
+                                </div>
+                            </div>
+                            <div class="customers-container">
+                                <div class="customers-container__header">
+                                    <div class="customers-container__header__content">
+                                        <h3 class="all-customers">All Customers</h3>
+                                        <a class="active-members" href="#">Active Members</a>
+                                    </div>
+                                    <div class="customers-container__header__search">
+                                        <input class="search-input" type="text" placeholder="Search">
+                                    </div>
+                                </div>
+                                <div class="customers-container__table table-container">
+                                    <table class="customer-table">
+                                        <tr>
+                                            <th>Customer Name</th>
+                                            <th>Company</th>
+                                            <th>Phone Number</th>
+                                            <th>Email</th>
+                                            <th>Country</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="customer-table__content">Jane Cooper</td>
+                                            <td class="customer-table__content">Microsoft</td>
+                                            <td class="customer-table__content">(225) 555-0118</td>
+                                            <td class="customer-table__content">jane@microsoft.com</td>
+                                            <td class="customer-table__content">United States</td>
+                                            <td class="customer-table__content"><button class="customer-table__button-active">Active</button></td>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="customer-table__content">Floyd Miles</td>
+                                            <td class="customer-table__content">Yahoo</td>
+                                            <td class="customer-table__content">(205) 555-0100</td>
+                                            <td class="customer-table__content">floyd@yahoo.com</td>
+                                            <td class="customer-table__content">Kiribati</td>
+                                            <td class="customer-table__content"><button class="customer-table__button-inactive">Inactive</button></td>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="customer-table__content">Ronald Richards</td>
+                                            <td class="customer-table__content">Adobe</td>
+                                            <td class="customer-table__content">(302) 555-0107</td>
+                                            <td class="customer-table__content">ronald@adobe.com</td>
+                                            <td class="customer-table__content">Israel</td>
+                                            <td class="customer-table__content"><button class="customer-table__button-inactive">Inactive</button></td>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="customer-table__content">Marvin McKinney</td>
+                                            <td class="customer-table__content">Tesla</td>
+                                            <td class="customer-table__content">(252) 555-0126</td>
+                                            <td class="customer-table__content">marvin@tesla.com</td>
+                                            <td class="customer-table__content">Iran</td>
+                                            <td class="customer-table__content"><button class="customer-table__button-active">Active</button></td>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="customer-table__content">Jerome Bell</td>
+                                            <td class="customer-table__content">Google</td>
+                                            <td class="customer-table__content">(629) 555-0129</td>
+                                            <td class="customer-table__content">jerome@google.com</td>
+                                            <td class="customer-table__content">Réunion</td>
+                                            <td class="customer-table__content"><button class="customer-table__button-active">Active</button></td>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="customer-table__content">Kathryn Murphy</td>
+                                            <td class="customer-table__content">Microsoft</td>
+                                            <td class="customer-table__content">(406) 555-0120</td>
+                                            <td class="customer-table__content">kathryn@microsoft.com</td>
+                                            <td class="customer-table__content">Curaçao</td>
+                                            <td class="customer-table__content"><button class="customer-table__button-active">Active</button></td>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="customer-table__content">Jacob Jones</td>
+                                            <td class="customer-table__content">Yahoo</td>
+                                            <td class="customer-table__content">(208) 555-0112</td>
+                                            <td class="customer-table__content">jacob@yahoo.com</td>
+                                            <td class="customer-table__content">Brazil</td>
+                                            <td class="customer-table__content"><button class="customer-table__button-active">Active</button></td>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="customer-table__content">Kristin Watson</td>
+                                            <td class="customer-table__content">Facebook</td>
+                                            <td class="customer-table__content">(704) 555-0127</td>
+                                            <td class="customer-table__content">kristin@facebook.com</td>
+                                            <td class="customer-table__content">Åland Islands</td>
+                                            <td class="customer-table__content"><button class="customer-table__button-inactive">Inactive</button></td>
+                                        </tr>
+                                        <tr class="line">
+                                            <td colspan="6"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="customers-container__table-mini-screens table-mini-screens">
+                                    <div class="table-mini-screens__info">
+                                        <ul class="table-mini-screens__headers">
+                                            <li>Customer Name</li>
+                                            <li>Company</li>
+                                            <li>Phone Number</li>
+                                            <li>Email</li>
+                                            <li>Country</li>
+                                            <li>Status</li>
+                                        </ul>
+                                        <ul class="table-mini-screens__data">
+                                            <li>Jane Cooper</li>
+                                            <li>Microsoft</li>
+                                            <li>(225) 555-0118</li>
+                                            <li>jane@microsoft.com</li>
+                                            <li>United States</li>
+                                            <li><button class="customer-table__button-active">Active</button></li>
+                                        </ul>
+                                    </div>
+                                    <hr class="hr-info-divider">
+                                    <div class="table-mini-screens__info">
+                                        <ul class="table-mini-screens__headers">
+                                            <li>Customer Name</li>
+                                            <li>Company</li>
+                                            <li>Phone Number</li>
+                                            <li>Email</li>
+                                            <li>Country</li>
+                                            <li>Status</li>
+                                        </ul>
+                                        <ul class="table-mini-screens__data">
+                                            <li>Floyd Miles</li>
+                                            <li>Yahoo</li>
+                                            <li>(205) 555-0100</li>
+                                            <li>floyd@yahoo.com</li>
+                                            <li>Kiribati</li>
+                                            <li><button class="customer-table__button-inactive">Inactive</button></li>
+                                        </ul>
+                                    </div>
+                                    <hr class="hr-info-divider">
+                                    <div class="table-mini-screens__info">
+                                        <ul class="table-mini-screens__headers">
+                                            <li>Customer Name</li>
+                                            <li>Company</li>
+                                            <li>Phone Number</li>
+                                            <li>Email</li>
+                                            <li>Country</li>
+                                            <li>Status</li>
+                                        </ul>
+                                        <ul class="table-mini-screens__data">
+                                            <li>Ronald Richards</li>
+                                            <li>Adobe</li>
+                                            <li>(302) 555-0107</li>
+                                            <li>ronald@adobe.com</li>
+                                            <li>Israel</li>
+                                            <li><button class="customer-table__button-inactive">Inactive</button></li>
+                                        </ul>
+                                    </div>
+                                    <hr class="hr-info-divider">
+                                    <div class="table-mini-screens__info">
+                                        <ul class="table-mini-screens__headers">
+                                            <li>Customer Name</li>
+                                            <li>Company</li>
+                                            <li>Phone Number</li>
+                                            <li>Email</li>
+                                            <li>Country</li>
+                                            <li>Status</li>
+                                        </ul>
+                                        <ul class="table-mini-screens__data">
+                                            <li>Marvin McKinney</li>
+                                            <li>Tesla</li>
+                                            <li>(252) 555-0126</li>
+                                            <li>marvin@tesla.com</li>
+                                            <li>Iran</li>
+                                            <li><button class="customer-table__button-active">Active</button></li>
+                                        </ul>
+                                    </div>
+                                    <hr class="hr-info-divider">
+                                    <div class="table-mini-screens__info">
+                                        <ul class="table-mini-screens__headers">
+                                            <li>Customer Name</li>
+                                            <li>Company</li>
+                                            <li>Phone Number</li>
+                                            <li>Email</li>
+                                            <li>Country</li>
+                                            <li>Status</li>
+                                        </ul>
+                                        <ul class="table-mini-screens__data">
+                                            <li>Jerome Bell</li>
+                                            <li>Google</li>
+                                            <li>(629) 555-0129</li>
+                                            <li>jerome@google.com</li>
+                                            <li>Réunion</li>
+                                            <li><button class="customer-table__button-active">Active</button></li>
+                                        </ul>
+                                    </div>
+                                    <hr class="hr-info-divider">
+                                    <div class="table-mini-screens__info">
+                                        <ul class="table-mini-screens__headers">
+                                            <li>Customer Name</li>
+                                            <li>Company</li>
+                                            <li>Phone Number</li>
+                                            <li>Email</li>
+                                            <li>Country</li>
+                                            <li>Status</li>
+                                        </ul>
+                                        <ul class="table-mini-screens__data">
+                                            <li>Kathryn Murphy</li>
+                                            <li>Microsoft</li>
+                                            <li>(406) 555-0120</li>
+                                            <li>kathryn@microsoft.com</li>
+                                            <li>Curaçao</li>
+                                            <li><button class="customer-table__button-active">Active</button></li>
+                                        </ul>
+                                    </div>
+                                    <hr class="hr-info-divider">
+                                    <div class="table-mini-screens__info">
+                                        <ul class="table-mini-screens__headers">
+                                            <li>Customer Name</li>
+                                            <li>Company</li>
+                                            <li>Phone Number</li>
+                                            <li>Email</li>
+                                            <li>Country</li>
+                                            <li>Status</li>
+                                        </ul>
+                                        <ul class="table-mini-screens__data">
+                                            <li>Jacob Jones</li>
+                                            <li>Yahoo</li>
+                                            <li>(208) 555-0112</li>
+                                            <li>jacob@yahoo.com</li>
+                                            <li>Brazil</li>
+                                            <li><button class="customer-table__button-active">Active</button></li>
+                                        </ul>
+                                    </div>
+                                    <hr class="hr-info-divider">
+                                    <div class="table-mini-screens__info">
+                                        <ul class="table-mini-screens__headers">
+                                            <li>Customer Name</li>
+                                            <li>Company</li>
+                                            <li>Phone Number</li>
+                                            <li>Email</li>
+                                            <li>Country</li>
+                                            <li>Status</li>
+                                        </ul>
+                                        <ul class="table-mini-screens__data">
+                                            <li>Kristin Watson</li>
+                                            <li>Facebook</li>
+                                            <li>(704) 555-0127</li>
+                                            <li>kristin@facebook.com</li>
+                                            <li>Åland Islands</li>
+                                            <li><button class="customer-table__button-inactive">Inactive</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="customers-container__entries entries">
+                                    <div class="entries__data">
+                                        Showing data 1 to 8 of  256K entries
+                                    </div>
+                                    <div class="entries__links">
+                                        <ul>
+                                            <li><button class="data-page"><img src="images/arrow_left.jpg" alt="arrow_left"></button></li>
+                                            <li><button class="data-page data-page-active">1</button></li>
+                                            <li><button class="data-page">2</button></li>
+                                            <li><button class="data-page">3</button></li>
+                                            <li><button class="data-page">4</button></li>
+                                            <li><button class="data-page">...</button></li>
+                                            <li><button class="data-page">40</button></li>
+                                            <li><button class="data-page"><img src="images/arrow_right.jpg" alt="arrow_right"></button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </main>
+    </div>
+<script src="js/hamburger_menu.js"></script>
+</body>
+</html>

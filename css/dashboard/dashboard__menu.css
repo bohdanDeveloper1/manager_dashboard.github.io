@@ -1,0 +1,113 @@
+.dashboard__menu__content{
+    width: 250px;
+    background-color: #FFFFFF;
+}
+
+.dashboard__menu__title{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 65px;
+}
+
+.dashboard__menu__title__img{
+    width: 37px;
+    height: 37px;
+    margin-right: 8px;
+}
+
+.dashboard__menu__title__text{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.26px;
+    margin-right: 4px;
+}
+
+.dashboard__menu__title__version{
+    padding-top: 10px;
+    color: #838383;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.1px;
+}
+
+.navigation{
+    margin-bottom: 600px;
+}
+
+.navigation__item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+    padding-left: 11px;
+}
+
+.navigation__item__img{
+    margin-right: 14px;
+    width: 24px;
+    height: 24px;
+}
+
+.navigation__item__name{
+    color: #9197B3;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.14px;
+}
+
+.navigation__item__arrow-container {
+    margin-left: auto;
+}
+
+.navigation__item__arrow{
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.navigation__item-active{
+    padding-left: 0;
+    width: 250px;
+    height: 46px;
+    border-radius: 8px;
+    background: #5932EA;
+}
+
+.navigation__item-active .navigation__item__img,
+.navigation__item-active .navigation__item__name {
+    color: #FFF;
+    filter: brightness(0) invert(1);
+}
+
+.manager-info{
+    display: flex;
+    align-items: center;
+}
+
+.manager-info__img{
+    margin-right: 12px;
+}
+
+.manager-info__content h3{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+}
+
+.manager-info__content span{
+    color: #757575;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+}

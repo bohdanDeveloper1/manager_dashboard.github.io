@@ -1,0 +1,8 @@
+@import "dashboard__menu.css";
+@import "dashboard__content.css";
+
+.dashboard{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1440px;
+}
