@@ -1,4 +1,5 @@
 let ifNavIsOpen = false;
+let wrapper = document.querySelector(".wrapper");
 let customersContainer = document.querySelector(".customers-container");
 let dashboardContent = document.querySelector(".dashboard__content");
 let dashboardMenu = document.querySelector(".dashboard__menu");
@@ -19,12 +20,6 @@ function openNav() {
        hamburgerMenuButtonOpen.style.display = "none";
        // показую кнопку hamburgerMenuButtonClose
        hamburgerMenuButtonClose.style.display = "block";
-
-       searchInput.classList.add("search-input-dark")
-       for (let el = 0; el < customerTableButtons.length; el++){
-           customerTableButtons[el].classList.add("button-bg-black")
-       }
-
        checkWindowWidth();
    }catch (e){
        console.log(e)
@@ -39,11 +34,6 @@ function closeNav() {
         dashboardMenu.classList.remove('dashboard__menu-active');
         hamburgerMenuButtonOpen.style.display = "block";
         hamburgerMenuButtonClose.style.display = "none";
-
-        searchInput.classList.remove("search-input-dark");
-        for (let el = 0; el < customerTableButtons.length; el++){
-            customerTableButtons[el].classList.remove("button-bg-black")
-        }
     }catch (e){
         console.log(e)
     }
@@ -65,7 +55,7 @@ function closeNavMiniScreen(){
 
 function checkWindowWidth() {
   try{
-      if (document.documentElement.clientWidth < 710 && ifNavIsOpen === true) {
+      if (document.documentElement.clientWidth < 816 && ifNavIsOpen === true) {
           dashboardContent.style.display = "none";
 
           dashboardMenu.classList.add("dashboard__menu-max");
@@ -86,3 +76,4 @@ function checkWindowWidth() {
 // Викликати функцію перевірки при завантаженні сторінки та після кожного змінення розміру вікна
 window.addEventListener('load', checkWindowWidth);
 window.addEventListener('resize', checkWindowWidth);
+
